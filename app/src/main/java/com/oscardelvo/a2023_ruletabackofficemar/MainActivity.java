@@ -68,14 +68,6 @@ public class MainActivity extends Activity {
         iniciarVariables();
         countdown();
 
-        randomPrioridades = new Random();
-        int tamanoPrioridad= 10;
-
-
-        int indexPrioridad = randomPrioridades.nextInt(tamanoPrioridad-0)+0;
-        Log.d("PrioridadJuego", strPrioridadJuego+"");
-        Log.d("Prioridad", indexPrioridad+"");
-
         btnPrioridad03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,12 +134,34 @@ public class MainActivity extends Activity {
                 premioCantidad.clear();
                 premioNombre.clear();
 
-                if (contadorVeces < 3){
-                    contadorVeces++;
-                    perderSiempre();
-                }else{
-                    contadorVeces = 0;
-                    ganarSiempre();
+                randomPrioridades = new Random();
+                int tamanoPrioridad= 10;
+
+
+                int indexPrioridad = randomPrioridades.nextInt(tamanoPrioridad-0)+0;
+                Log.d("PrioridadJuego", strPrioridadJuego+"");
+                Log.d("Prioridad", indexPrioridad+"");
+
+                if(strPrioridadJuego.equals("Igual")){
+
+                    if(indexPrioridad > 4){
+                        perderSiempre();
+                    }else{
+                        ganarSiempre();
+                    }
+                } else if (strPrioridadJuego.equals("Baja")) {
+                    if(indexPrioridad > 2){
+                        perderSiempre();
+                    }else{
+                        ganarSiempre();
+                    }
+                }
+                else if (strPrioridadJuego.equals("Alta")) {
+                    if(indexPrioridad > 6){
+                        perderSiempre();
+                    }else{
+                        ganarSiempre();
+                    }
                 }
 
                 Log.d("premioCantidad", premioCantidad+"");
@@ -401,42 +415,47 @@ public class MainActivity extends Activity {
     }
 
     public void ganarSiempre(){
-        if (oliveGarden==0){
-        }else{
-            premioCantidad.add(String.valueOf(oliveGarden));
-            premioNombre.add(String.valueOf(strOliveGardenN));
 
+        if(oliveGarden==0 && johnnyRockets==0 && universal==0 && oldNavy==0){
             premioCantidad.add(String.valueOf(100));
-            premioNombre.add(String.valueOf("OliveGarden"));
+            premioNombre.add(String.valueOf("Perdio01"));
+        }else {
+            if (oliveGarden == 0) {
+            } else {
+                premioCantidad.add(String.valueOf(oliveGarden));
+                premioNombre.add(String.valueOf(strOliveGardenN));
+
+                premioCantidad.add(String.valueOf(100));
+                premioNombre.add(String.valueOf("OliveGarden"));
+            }
+
+            if (johnnyRockets == 0) {
+            } else {
+                premioCantidad.add(String.valueOf(johnnyRockets));
+                premioNombre.add(String.valueOf(strJohnnyRocketsN));
+
+                premioCantidad.add(String.valueOf(100));
+                premioNombre.add(String.valueOf("JohnnyRockets"));
+            }
+
+            if (universal == 0) {
+            } else {
+                premioCantidad.add(String.valueOf(universal));
+                premioNombre.add(String.valueOf(strUniversalN));
+
+                premioCantidad.add(String.valueOf(100));
+                premioNombre.add(String.valueOf("Universal"));
+            }
+
+            if (oldNavy == 0) {
+            } else {
+                premioCantidad.add(String.valueOf(oldNavy));
+                premioNombre.add(String.valueOf(strOldNavyN));
+
+                premioCantidad.add(String.valueOf(100));
+                premioNombre.add(String.valueOf("OldNavy"));
+            }
         }
-
-        if (johnnyRockets==0){
-        }else{
-            premioCantidad.add(String.valueOf(johnnyRockets));
-            premioNombre.add(String.valueOf(strJohnnyRocketsN));
-
-            premioCantidad.add(String.valueOf(100));
-            premioNombre.add(String.valueOf("JohnnyRockets"));
-        }
-
-        if (universal==0){
-        }else{
-            premioCantidad.add(String.valueOf(universal));
-            premioNombre.add(String.valueOf(strUniversalN));
-
-            premioCantidad.add(String.valueOf(100));
-            premioNombre.add(String.valueOf("Universal"));
-        }
-
-        if (oldNavy==0){
-        }else{
-            premioCantidad.add(String.valueOf(oldNavy));
-            premioNombre.add(String.valueOf(strOldNavyN));
-
-            premioCantidad.add(String.valueOf(100));
-            premioNombre.add(String.valueOf("OldNavy"));
-        }
-
 
     }
 
