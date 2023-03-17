@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
     List<String> premioCantidad = new ArrayList<>();
     List<String> premioNombre = new ArrayList<>();
     Random randomGenerator, randomPrioridades;
-
+    int contadorVeces = 0;
     String fileName = "inventario.txt";
     String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/RuletaBack/";
     String TAG = MainActivity.class.getName();
@@ -142,49 +142,12 @@ public class MainActivity extends Activity {
                 premioCantidad.clear();
                 premioNombre.clear();
 
-                
-
-                if (oliveGarden==0){
+                if (contadorVeces < 3){
+                    perderSiempre();
                 }else{
-                    premioCantidad.add(String.valueOf(oliveGarden));
-                    premioNombre.add(String.valueOf(strOliveGardenN));
-
-                    premioCantidad.add(String.valueOf(100));
-                    premioNombre.add(String.valueOf("OliveGarden"));
+                    contadorVeces = 0;
+                    ganarSiempre();
                 }
-
-                if (johnnyRockets==0){
-                }else{
-                    premioCantidad.add(String.valueOf(johnnyRockets));
-                    premioNombre.add(String.valueOf(strJohnnyRocketsN));
-
-                    premioCantidad.add(String.valueOf(100));
-                    premioNombre.add(String.valueOf("JohnnyRockets"));
-                }
-
-                if (universal==0){
-                }else{
-                    premioCantidad.add(String.valueOf(universal));
-                    premioNombre.add(String.valueOf(strUniversalN));
-
-                    premioCantidad.add(String.valueOf(100));
-                    premioNombre.add(String.valueOf("Universal"));
-                }
-
-                if (oldNavy==0){
-                }else{
-                    premioCantidad.add(String.valueOf(oldNavy));
-                    premioNombre.add(String.valueOf(strOldNavyN));
-
-                    premioCantidad.add(String.valueOf(100));
-                    premioNombre.add(String.valueOf("OldNavy"));
-                }
-
-                premioCantidad.add(String.valueOf(100));
-                premioNombre.add(String.valueOf("Perdio01"));
-
-                premioCantidad.add(String.valueOf(100));
-                premioNombre.add(String.valueOf("Perdio02"));
 
                 Log.d("premioCantidad", premioCantidad+"");
                 Log.d("premioNombre", premioNombre+"");
