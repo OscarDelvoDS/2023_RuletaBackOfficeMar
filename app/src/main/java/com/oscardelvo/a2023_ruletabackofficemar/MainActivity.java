@@ -167,6 +167,7 @@ public class MainActivity extends Activity {
                 Log.d("premioCantidad", premioCantidad+"");
                 Log.d("premioNombre", premioNombre+"");
 
+
                 txtGanasteTexto.setText("");
                 txtPremioTexto.setText("");
                 btnrclock.setEnabled(false);
