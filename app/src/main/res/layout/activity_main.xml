@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlJuego"
+        android:layout_width="1080px"
+        android:layout_height="1920px">
+
+        <Button
+            android:id="@+id/btnPrioridad01"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:text="ALTA GANA"
+            android:textSize="30px"
+            />
+
+        <Button
+            android:id="@+id/btnPrioridad02"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:text="IGUAL"
+            android:textSize="30px"
+            android:layout_marginRight="210px"
+            />
+        <Button
+            android:id="@+id/btnPrioridad03"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:text="BAJA GANA"
+            android:textSize="30px"
+            android:layout_marginRight="420px"
+            />
+
+
+        <ImageView
+            android:id="@+id/imgPremio"
+            android:layout_width="910px"
+            android:layout_height="910px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="400px" />
+
+        <ImageView
+            android:id="@+id/imgvw"
+            android:layout_width="910px"
+            android:layout_height="910px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="400px"
+            android:src="@mipmap/ruleta_premio01" />
+
+        <ImageView
+            android:id="@+id/imgfondo"
+            android:layout_width="1080px"
+            android:layout_height="1920px"
+            android:src="@mipmap/fondo" />
+
+        <Button
+            android:id="@+id/btnRClk"
+            android:layout_width="1042px"
+            android:layout_height="1042px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="335px"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/btnInventario"
+            android:layout_width="1000px"
+            android:layout_height="200px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50px"
+            android:alpha="0" />
+
+        <ImageView
+            android:id="@+id/imgAnimA"
+            android:layout_width="1042px"
+            android:layout_height="1042px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="334px"
+            android:src="@mipmap/anim_a" />
+
+        <ImageView
+            android:id="@+id/imgAnimB"
+            android:layout_width="1042px"
+            android:layout_height="1042px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="334px"
+            android:src="@mipmap/anim_b" />
+
+        <TextView
+            android:id="@+id/txtGanasteTexto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="250px"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textSize="100px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPremioTexto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50px"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textSize="80px"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlContrasena"
+        android:layout_width="1080px"
+        android:layout_height="1920px"
+        android:background="@mipmap/fondo_contrasena"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/btnCancelarContrasena"
+            android:layout_width="378px"
+            android:layout_height="111px"
+            android:layout_marginLeft="87px"
+            android:layout_marginTop="988px"
+            android:background="#fd5c02"
+            android:text="CANCELAR"
+            android:textColor="#FFF"
+            android:textSize="55px" />
+
+        <Button
+            android:id="@+id/btnEntrarContrasena"
+            android:layout_width="378px"
+            android:layout_height="111px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="988px"
+            android:layout_marginRight="87px"
+            android:background="#fd5c02"
+            android:text="ENTRAR"
+            android:textColor="#FFF"
+            android:textSize="55px" />
+
+       <EditText
+                android:id="@+id/txtContrasena"
+                android:layout_width="903px"
+                android:layout_height="138px"
+                android:gravity="center"
+           android:layout_marginTop="715px"
+           android:layout_centerHorizontal="true"
+                android:inputType="numberPassword"
+                android:textSize="55px" />
+
+    </RelativeLayout>
+</RelativeLayout>

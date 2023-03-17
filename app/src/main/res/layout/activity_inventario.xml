@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="1080px"
+    android:layout_height="1920px"
+    android:background="@mipmap/fondo_inventario"
+    >
+
+    <Button
+        android:id="@+id/btnCancelarInv"
+        android:layout_width="378px"
+        android:layout_height="111px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="87px"
+        android:layout_marginLeft="87px"
+        android:layout_marginTop="1130px"
+        android:background="#fd5c02"
+        android:textSize="55px"
+        android:textColor="#FFF"
+        android:text="CANCELAR"/>
+
+    <Button
+        android:id="@+id/btnGuardarInv"
+        android:layout_width="378px"
+        android:layout_height="111px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="1130px"
+        android:layout_marginEnd="87px"
+        android:layout_marginRight="87px"
+        android:background="#fd5c02"
+        android:textSize="55px"
+        android:textColor="#FFF"
+        android:text="GUARDAR" />
+
+    <EditText
+        android:id="@+id/txtInvOliveGarden"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="150px"
+        android:layout_marginLeft="150px"
+        android:layout_marginTop="430px"
+        android:ems="10"
+        android:textSize="50px"
+        android:digits="0123456789"
+        android:gravity="center"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/txtInvJohnnyRockets"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="150px"
+        android:layout_marginLeft="150px"
+        android:layout_marginTop="546px"
+        android:ems="10"
+        android:textSize="50px"
+        android:digits="0123456789"
+        android:gravity="center"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/txtInvOldNavy"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="150px"
+        android:layout_marginLeft="150px"
+        android:layout_marginTop="661px"
+        android:ems="10"
+        android:textSize="55px"
+        android:gravity="center"
+        android:inputType="phone"
+        android:digits="0123456789"/>
+
+    <EditText
+        android:id="@+id/txtInvUniversal"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="150px"
+        android:layout_marginLeft="150px"
+        android:layout_marginTop="777px"
+        android:ems="10"
+        android:textSize="55px"
+        android:digits="0123456789"
+        android:gravity="center"
+        android:inputType="phone" />
+
+
+</RelativeLayout>
