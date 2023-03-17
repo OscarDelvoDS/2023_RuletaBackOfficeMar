@@ -143,6 +143,7 @@ public class MainActivity extends Activity {
                 premioNombre.clear();
 
                 if (contadorVeces < 3){
+                    contadorVeces++;
                     perderSiempre();
                 }else{
                     contadorVeces = 0;
