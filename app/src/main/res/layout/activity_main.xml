@@ -10,6 +10,7 @@
         android:layout_width="1080px"
         android:layout_height="1920px">
 
+
         <Button
             android:id="@+id/btnPrioridad01"
             android:layout_width="200px"
@@ -119,6 +120,14 @@
             android:textColor="#FFF"
             android:textSize="80px"
             android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/imgCambioPrioridades"
+            android:layout_width="123px"
+            android:layout_height="40px"
+            android:src="@mipmap/img_igual" />
+
     </RelativeLayout>
 
     <RelativeLayout

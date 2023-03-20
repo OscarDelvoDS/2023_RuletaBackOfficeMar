@@ -36,7 +36,7 @@ import java.util.Random;
 public class MainActivity extends Activity {
     Button btnrclock, btnInventario, btnCancelarContrasena, btnEntrarContrasena, btnPrioridad03,
             btnPrioridad02, btnPrioridad01;
-    ImageView img, imgLuzA, imgLuzB, imgPremio;
+    ImageView img, imgLuzA, imgLuzB, imgPremio, imgCambioPrioridades;
     Handler handler, handler3;
     Runnable runnable, runnable3;
     CountDownTimer x;
@@ -143,13 +143,14 @@ public class MainActivity extends Activity {
                 Log.d("Prioridad", indexPrioridad+"");
 
                 if(strPrioridadJuego.equals("Igual")){
-
+                    imgCambioPrioridades.setImageResource(R.mipmap.img_igual);
                     if(indexPrioridad > 4){
                         perderSiempre();
                     }else{
                         ganarSiempre();
                     }
                 } else if (strPrioridadJuego.equals("Baja")) {
+                    imgCambioPrioridades.setImageResource(R.mipmap.img_baja);
                     if(indexPrioridad > 2){
                         perderSiempre();
                     }else{
@@ -157,6 +158,7 @@ public class MainActivity extends Activity {
                     }
                 }
                 else if (strPrioridadJuego.equals("Alta")) {
+                    imgCambioPrioridades.setImageResource(R.mipmap.img_alta);
                     if(indexPrioridad > 6){
                         perderSiempre();
                     }else{
@@ -308,6 +310,7 @@ public class MainActivity extends Activity {
 
         imgLuzA = findViewById(R.id.imgAnimA);
         imgLuzB = findViewById(R.id.imgAnimB);
+        imgCambioPrioridades = findViewById(R.id.imgCambioPrioridades);
 
         img = findViewById(R.id.imgvw);
         imgPremio= findViewById(R.id.imgPremio);
