@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
         btnPrioridad03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                imgCambioPrioridades.setImageResource(R.mipmap.img_baja);
                strPrioridadJuego = "Baja";
                 Log.d("PrioridadJuego", strPrioridadJuego+"");
             }
@@ -79,6 +80,7 @@ public class MainActivity extends Activity {
         btnPrioridad02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                imgCambioPrioridades.setImageResource(R.mipmap.img_igual);
                 strPrioridadJuego = "Igual";
                 Log.d("PrioridadJuego", strPrioridadJuego+"");
             }
@@ -87,6 +89,7 @@ public class MainActivity extends Activity {
         btnPrioridad01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                imgCambioPrioridades.setImageResource(R.mipmap.img_alta);
                 strPrioridadJuego = "Alta";
                 Log.d("PrioridadJuego", strPrioridadJuego+"");
             }
@@ -143,14 +146,12 @@ public class MainActivity extends Activity {
                 Log.d("Prioridad", indexPrioridad+"");
 
                 if(strPrioridadJuego.equals("Igual")){
-                    imgCambioPrioridades.setImageResource(R.mipmap.img_igual);
                     if(indexPrioridad > 4){
                         perderSiempre();
                     }else{
                         ganarSiempre();
                     }
                 } else if (strPrioridadJuego.equals("Baja")) {
-                    imgCambioPrioridades.setImageResource(R.mipmap.img_baja);
                     if(indexPrioridad > 2){
                         perderSiempre();
                     }else{
@@ -158,7 +159,6 @@ public class MainActivity extends Activity {
                     }
                 }
                 else if (strPrioridadJuego.equals("Alta")) {
-                    imgCambioPrioridades.setImageResource(R.mipmap.img_alta);
                     if(indexPrioridad > 6){
                         perderSiempre();
                     }else{
